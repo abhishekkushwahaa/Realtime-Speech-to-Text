@@ -1,7 +1,13 @@
+import SpeechRecognition from "./components/SpeechRecognition";
+
 function App() {
   return (
     <>
-      <h3 className="heading">Real-Time Speech to Text</h3>
+      <div className="App">
+        <header className="App-header">
+          <SpeechRecognition />
+        </header>
+      </div>
     </>
   );
 }

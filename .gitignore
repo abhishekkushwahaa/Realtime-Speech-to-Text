@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+vosk-model-small-en-in-0.4
 dist
 dist-ssr
 *.local

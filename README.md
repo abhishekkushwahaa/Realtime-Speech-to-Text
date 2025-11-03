@@ -19,16 +19,35 @@ A simple, self-hosted web app that converts your voice into text (English, Hindi
 
 ### 1. Run the Vosk Server
 
-@@ -43,21 +43,21 @@
-bun install
+Download and unzip a model (e.g., Indian English):
 
-````
+```bash
+wget https://alphacephei.com/vosk/models/vosk-model-small-en-in-0.4.zip
+unzip vosk-model-small-en-in-0.4.zip
+mv vosk-model-small-en-in-0.4 model
+```
+
+Then start the Vosk WebSocket server:
+
+```bash
+docker run -d -p 2700:2700 -v $PWD/model:/opt/vosk/model alphacep/vosk-server:latest
+```
+
+🟢 Vosk now runs locally at **ws://localhost:2700**
+
+### 2. Create the Vite + React App
+
+```bash
+bun create vite@latest speech-to-text-app
+cd speech-to-text-app
+bun install
+```
 
 ### 3. Run the App
 
 ```bash
 bun run dev
-````
+```
 
 Open the local link (usually `http://localhost:5173`).
 

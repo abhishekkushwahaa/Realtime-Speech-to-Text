@@ -35,11 +35,11 @@ docker run -d -p 2700:2700 -v "$PWD/vosk-model-small-en-in-0.4:/opt/vosk/model" 
 
 🟢 Vosk now runs locally at **ws://localhost:2700**
 
-### 2. Create the Vite + React App
+### 2. React App Setup
 
 ```bash
-bun create vite@latest speech-to-text-app
-cd speech-to-text-app
+git clone https://github.com/abhishekkushwahaa/Realtime-Speech-to-Text-App.git
+cd Realtime-Speech-to-Text-App
 bun install
 ```
 

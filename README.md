@@ -1,63 +1,16 @@
-# 🎙️ Real-Time Speech-to-Text (Vite + Vosk)
+# React + Vite
 
-A simple, self-hosted web app that converts your voice into text (English, Hindi, or Hinglish) in real time using **Vosk** and **React (Vite)**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- 🗣️ Real-time speech-to-text (STT)
-- 🌏 Works offline (no API keys!)
-- 💡 Supports English + Hindi
-- 🧱 Built with **Vite + React** for fast dev setup
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Requirements
+## React Compiler
 
-- [Node.js](https://nodejs.org/) (v16 or newer)
-- [Docker](https://www.docker.com/)
-- A Vosk model (like `vosk-model-small-en-in-0.4`)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Setup
+## Expanding the ESLint configuration
 
-### 1. Run the Vosk Server
-
-Download and unzip a model (e.g., Indian English):
-
-```bash
-wget https://alphacephei.com/vosk/models/vosk-model-small-en-in-0.4.zip
-unzip vosk-model-small-en-in-0.4.zip
-mv vosk-model-small-en-in-0.4 model
-```
-
-Then start the Vosk WebSocket server:
-
-```bash
-docker run -d -p 2700:2700 -v $PWD/model:/opt/vosk/model alphacep/vosk-server:latest
-```
-
-🟢 Vosk now runs locally at **ws://localhost:2700**
-
-### 2. Create the Vite + React App
-
-```bash
-bun create vite@latest speech-to-text-app
-cd speech-to-text-app
-bun install
-```
-
-### 3. Run the App
-
-```bash
-bun run dev
-```
-
-Open the local link (usually `http://localhost:5173`).
-
-## 🗣️ How to Use
-
-1. Click **Start Listening**
-2. Allow microphone access
-3. Speak in English or Hindi
-4. Watch live text appear instantly
-
-## 📜 License
-
-MIT © 2025 — Built with ❤️ using [Vosk](https://alphacephei.com/vosk/) and [React](https://react.dev/)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

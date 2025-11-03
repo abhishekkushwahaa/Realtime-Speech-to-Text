@@ -1,4 +1,4 @@
-# 🎙️ Real-Time Speech-to-Text (Vite + Vosk)
+# 🎙️ Real-Time Speech-to-Text
 
 A simple, self-hosted web app that converts your voice into text (English, Hindi, or Hinglish) in real time using **Vosk** and **React (Vite)**.
 

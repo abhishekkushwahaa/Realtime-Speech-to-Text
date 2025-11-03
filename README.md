@@ -30,7 +30,7 @@ mv vosk-model-small-en-in-0.4 model
 Then start the Vosk WebSocket server:
 
 ```bash
-docker run -d -p 2700:2700 -v $PWD/model:/opt/vosk/model alphacep/vosk-server:latest
+docker run -d -p 2700:2700 -v "$PWD/vosk-model-small-en-in-0.4:/opt/vosk/model" alphacep/kaldi-vosk-server python3 /opt/vosk-server/websocket/asr_server.py /opt/vosk/model
 ```
 
 🟢 Vosk now runs locally at **ws://localhost:2700**

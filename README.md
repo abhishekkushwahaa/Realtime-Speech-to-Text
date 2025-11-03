@@ -1,16 +1,44 @@
-# React + Vite
+# 🎙️ Real-Time Speech-to-Text (Vite + Vosk)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, self-hosted web app that converts your voice into text (English, Hindi, or Hinglish) in real time using **Vosk** and **React (Vite)**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🗣️ Real-time speech-to-text (STT)
+- 🌏 Works offline (no API keys!)
+- 💡 Supports English + Hindi
+- 🧱 Built with **Vite + React** for fast dev setup
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Node.js](https://nodejs.org/) (v16 or newer)
+- [Docker](https://www.docker.com/)
+- A Vosk model (like `vosk-model-small-en-in-0.4`)
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Run the Vosk Server
+
+@@ -43,21 +43,21 @@
+bun install
+
+````
+
+### 3. Run the App
+
+```bash
+bun run dev
+````
+
+Open the local link (usually `http://localhost:5173`).
+
+## 🗣️ How to Use
+
+1. Click **Start Listening**
+2. Allow microphone access
+3. Speak in English or Hindi
+4. Watch live text appear instantly
+
+## 📜 License
+
+MIT © 2025 — Built with ❤️ using [Vosk](https://alphacephei.com/vosk/) and [React](https://react.dev/)
